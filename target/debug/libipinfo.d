@@ -1,0 +1,1 @@
+/home/mranv/Downloads/rust-geoip/target/debug/libipinfo.rlib: /home/mranv/Downloads/rust-geoip/src/api.rs /home/mranv/Downloads/rust-geoip/src/bogon.rs /home/mranv/Downloads/rust-geoip/src/data.rs /home/mranv/Downloads/rust-geoip/src/error.rs /home/mranv/Downloads/rust-geoip/src/ipinfo.rs /home/mranv/Downloads/rust-geoip/src/lib.rs /home/mranv/Downloads/rust-geoip/src/util.rs
