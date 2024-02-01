@@ -1,0 +1,33 @@
+name: Rust lints and tests
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run Clippy
+      env:
+        RUSTFLAGS: "-Dwarnings"
+      run: cargo clippy
+
+    - name: Check formatting
+      run: cargo fmt --check
+
+    - name: Build
+      run: cargo build --verbose
+
+    - name: Run tests
+      env: 
+          IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
+      run: cargo test --verbose
